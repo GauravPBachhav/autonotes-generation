@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=True
+      - WHISPER_MODEL=base
+      - DEVICE=cpu
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./backend:/app
+      - ./uploads:/app/uploads
+      - ./output:/app/output
+      - ./temp:/app/temp
+    command: python main.py
+    networks:
+      - autonotes-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000/api
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev
+    networks:
+      - autonotes-network
+    depends_on:
+      - backend
+
+networks:
+  autonotes-network:
+    driver: bridge
+
+volumes:
+  uploads:
+  output:
+  temp:

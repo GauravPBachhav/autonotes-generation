@@ -1,0 +1,729 @@
+2026-01-10 23:23:43,233 - __main__ - INFO - startup_event:113 - Starting Autonotes Generation API
+2026-01-10 23:23:43,234 - __main__ - INFO - startup_event:114 - Debug mode: True
+2026-01-10 23:23:43,234 - __main__ - INFO - startup_event:115 - Whisper Model: base
+2026-01-10 23:23:43,234 - __main__ - INFO - startup_event:116 - Device: cpu
+2026-01-10 23:23:43,234 - __main__ - INFO - startup_event:117 - Upload Directory: ./uploads
+2026-01-10 23:23:43,235 - __main__ - INFO - startup_event:118 - Output Directory: ./output
+2026-01-10 23:23:43,237 - __main__ - INFO - shutdown_event:125 - Shutting down Autonotes Generation API
+2026-01-11 00:21:01,687 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:21:01,688 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:21:01,688 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:21:01,688 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:21:01,689 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:21:01,689 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:21:01,690 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:21:06,080 - __main__ - INFO - shutdown_event:133 - Shutting down Autonotes Generation API
+2026-01-11 00:23:13,523 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:23:13,524 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:23:13,524 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:23:13,524 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:23:13,524 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:23:13,525 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:23:13,525 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:23:37,515 - __main__ - INFO - shutdown_event:133 - Shutting down Autonotes Generation API
+2026-01-11 00:24:03,572 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:24:03,573 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:24:03,574 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:24:03,574 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:24:03,574 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:24:03,575 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:24:03,575 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:25:00,425 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 99151aac-64aa-45d4-beb6-439bf1c6452d, Size: 217.25 KB
+2026-01-11 00:25:00,426 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3, File exists: True
+2026-01-11 00:25:00,452 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 99151aac-64aa-45d4-beb6-439bf1c6452d, Path: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3, Exists: True
+2026-01-11 00:25:00,458 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 99151aac-64aa-45d4-beb6-439bf1c6452d, Path: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3, Exists: True
+2026-01-11 00:25:00,480 - routes.process - INFO - process_file:63 - Processing started - Job: 99151aac-64aa-45d4-beb6-439bf1c6452d
+2026-01-11 00:25:00,480 - routes.process - INFO - process_file:64 - File path received: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3
+2026-01-11 00:25:00,481 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3
+2026-01-11 00:25:00,483 - modules.transcriber - INFO - _load_model:35 - Loading Whisper model: base
+2026-01-11 00:25:02,273 - modules.transcriber - INFO - _load_model:37 - Model loaded successfully
+2026-01-11 00:25:02,273 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 00:25:02,274 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 00:25:02,274 - modules.transcriber - INFO - transcribe:97 - Starting transcription: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3
+2026-01-11 00:25:02,275 - modules.transcriber - INFO - transcribe:104 - File exists: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3, file size: 222460 bytes
+2026-01-11 00:25:02,275 - modules.transcriber - INFO - transcribe:111 - Direct transcription for format: .mp3
+2026-01-11 00:25:02,276 - modules.transcriber - INFO - transcribe:119 - Transcribing audio from: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3, exists: True
+2026-01-11 00:25:02,308 - modules.transcriber - WARNING - transcribe:127 - FFmpeg error during transcription: [WinError 2] The system cannot find the file specified
+2026-01-11 00:25:02,308 - modules.transcriber - WARNING - transcribe:128 - Falling back to mock transcription
+2026-01-11 00:25:02,309 - modules.transcriber - INFO - transcribe:142 - Transcription completed. Duration: 30s, Words: 294
+2026-01-11 00:25:02,310 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 00:25:02,310 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 00:25:02,311 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 00:25:02,312 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 00:25:02,313 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 00:25:02,313 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 00:25:02,313 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:25:02,314 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:25:02,314 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 00:25:02,315 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 00:25:02,315 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 00:25:02,316 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 00:25:02,316 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 00:25:02,330 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 00:25:02,332 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 99151aac-64aa-45d4-beb6-439bf1c6452d
+2026-01-11 00:25:02,368 - routes.process - INFO - process_file:63 - Processing started - Job: 99151aac-64aa-45d4-beb6-439bf1c6452d
+2026-01-11 00:25:02,369 - routes.process - INFO - process_file:64 - File path received: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3
+2026-01-11 00:25:02,370 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3
+2026-01-11 00:25:02,370 - modules.transcriber - INFO - _load_model:35 - Loading Whisper model: base
+2026-01-11 00:25:03,844 - modules.transcriber - INFO - _load_model:37 - Model loaded successfully
+2026-01-11 00:25:03,844 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 00:25:03,845 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 00:25:03,845 - modules.transcriber - INFO - transcribe:97 - Starting transcription: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3
+2026-01-11 00:25:03,846 - modules.transcriber - INFO - transcribe:104 - File exists: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3, file size: 222460 bytes
+2026-01-11 00:25:03,846 - modules.transcriber - INFO - transcribe:111 - Direct transcription for format: .mp3
+2026-01-11 00:25:03,847 - modules.transcriber - INFO - transcribe:119 - Transcribing audio from: ./uploads\99151aac-64aa-45d4-beb6-439bf1c6452d_notes.mp3, exists: True
+2026-01-11 00:25:03,871 - modules.transcriber - WARNING - transcribe:127 - FFmpeg error during transcription: [WinError 2] The system cannot find the file specified
+2026-01-11 00:25:03,871 - modules.transcriber - WARNING - transcribe:128 - Falling back to mock transcription
+2026-01-11 00:25:03,872 - modules.transcriber - INFO - transcribe:142 - Transcription completed. Duration: 30s, Words: 294
+2026-01-11 00:25:03,872 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 00:25:03,873 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 00:25:03,873 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 00:25:03,873 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 00:25:03,874 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 00:25:03,874 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 00:25:03,875 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:25:03,875 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:25:03,875 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 00:25:03,876 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 00:25:03,876 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 00:25:03,876 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 00:25:03,877 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 00:25:03,883 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 00:25:03,886 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 99151aac-64aa-45d4-beb6-439bf1c6452d
+2026-01-11 00:26:28,722 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 9ec17339-3950-4150-a175-a93824b417f8, Size: 217.25 KB
+2026-01-11 00:26:28,723 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3, File exists: True
+2026-01-11 00:26:28,742 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 9ec17339-3950-4150-a175-a93824b417f8, Path: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3, Exists: True
+2026-01-11 00:26:28,747 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 9ec17339-3950-4150-a175-a93824b417f8, Path: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3, Exists: True
+2026-01-11 00:26:28,754 - routes.process - INFO - process_file:63 - Processing started - Job: 9ec17339-3950-4150-a175-a93824b417f8
+2026-01-11 00:26:28,755 - routes.process - INFO - process_file:64 - File path received: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3
+2026-01-11 00:26:28,756 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3
+2026-01-11 00:26:28,756 - modules.transcriber - INFO - _load_model:35 - Loading Whisper model: base
+2026-01-11 00:26:30,311 - modules.transcriber - INFO - _load_model:37 - Model loaded successfully
+2026-01-11 00:26:30,312 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 00:26:30,313 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 00:26:30,314 - modules.transcriber - INFO - transcribe:97 - Starting transcription: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3
+2026-01-11 00:26:30,315 - modules.transcriber - INFO - transcribe:104 - File exists: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3, file size: 222460 bytes
+2026-01-11 00:26:30,317 - modules.transcriber - INFO - transcribe:111 - Direct transcription for format: .mp3
+2026-01-11 00:26:30,317 - modules.transcriber - INFO - transcribe:119 - Transcribing audio from: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3, exists: True
+2026-01-11 00:26:30,353 - modules.transcriber - WARNING - transcribe:127 - FFmpeg error during transcription: [WinError 2] The system cannot find the file specified
+2026-01-11 00:26:30,353 - modules.transcriber - WARNING - transcribe:128 - Falling back to mock transcription
+2026-01-11 00:26:30,356 - modules.transcriber - INFO - transcribe:142 - Transcription completed. Duration: 30s, Words: 294
+2026-01-11 00:26:30,356 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 00:26:30,357 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 00:26:30,357 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 00:26:30,359 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 00:26:30,359 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 00:26:30,359 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 00:26:30,360 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:26:30,360 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:26:30,360 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 00:26:30,361 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 00:26:30,361 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 00:26:30,361 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 00:26:30,362 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 00:26:30,376 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 00:26:30,380 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 9ec17339-3950-4150-a175-a93824b417f8
+2026-01-11 00:26:30,403 - routes.process - INFO - process_file:63 - Processing started - Job: 9ec17339-3950-4150-a175-a93824b417f8
+2026-01-11 00:26:30,403 - routes.process - INFO - process_file:64 - File path received: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3
+2026-01-11 00:26:30,404 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3
+2026-01-11 00:26:30,405 - modules.transcriber - INFO - _load_model:35 - Loading Whisper model: base
+2026-01-11 00:26:31,763 - modules.transcriber - INFO - _load_model:37 - Model loaded successfully
+2026-01-11 00:26:31,763 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 00:26:31,764 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 00:26:31,765 - modules.transcriber - INFO - transcribe:97 - Starting transcription: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3
+2026-01-11 00:26:31,765 - modules.transcriber - INFO - transcribe:104 - File exists: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3, file size: 222460 bytes
+2026-01-11 00:26:31,765 - modules.transcriber - INFO - transcribe:111 - Direct transcription for format: .mp3
+2026-01-11 00:26:31,766 - modules.transcriber - INFO - transcribe:119 - Transcribing audio from: ./uploads\9ec17339-3950-4150-a175-a93824b417f8_notes.mp3, exists: True
+2026-01-11 00:26:31,789 - modules.transcriber - WARNING - transcribe:127 - FFmpeg error during transcription: [WinError 2] The system cannot find the file specified
+2026-01-11 00:26:31,790 - modules.transcriber - WARNING - transcribe:128 - Falling back to mock transcription
+2026-01-11 00:26:31,791 - modules.transcriber - INFO - transcribe:142 - Transcription completed. Duration: 30s, Words: 294
+2026-01-11 00:26:31,791 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 00:26:31,792 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 00:26:31,792 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 00:26:31,793 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 00:26:31,793 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 00:26:31,793 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 00:26:31,794 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:26:31,794 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:26:31,794 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 00:26:31,795 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 00:26:31,795 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 00:26:31,795 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 00:26:31,796 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 00:26:31,802 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 00:26:31,804 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 9ec17339-3950-4150-a175-a93824b417f8
+2026-01-11 00:27:42,183 - __main__ - INFO - shutdown_event:133 - Shutting down Autonotes Generation API
+2026-01-11 00:28:08,487 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:28:08,488 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:28:08,488 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:28:08,488 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:28:08,489 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:28:08,489 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:28:08,490 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:28:10,473 - __main__ - INFO - shutdown_event:133 - Shutting down Autonotes Generation API
+2026-01-11 00:28:21,136 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:28:21,137 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:28:21,138 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:28:21,138 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:28:21,138 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:28:21,138 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:28:21,139 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:38:04,899 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:38:04,900 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:38:04,900 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:38:04,900 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:38:04,901 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:38:04,901 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:38:04,902 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:38:07,655 - __main__ - INFO - shutdown_event:133 - Shutting down Autonotes Generation API
+2026-01-11 00:40:34,807 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:40:34,809 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:40:34,809 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:40:34,809 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:40:34,810 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:40:34,810 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:40:34,811 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:41:07,181 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c, Size: 217.25 KB
+2026-01-11 00:41:07,182 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3, File exists: True
+2026-01-11 00:41:07,198 - routes.upload - INFO - check_upload_status:108 - Status check - Job: f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c, Path: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3, Exists: True
+2026-01-11 00:41:07,203 - routes.upload - INFO - check_upload_status:108 - Status check - Job: f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c, Path: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3, Exists: True
+2026-01-11 00:41:07,217 - routes.process - INFO - process_file:63 - Processing started - Job: f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c
+2026-01-11 00:41:07,217 - routes.process - INFO - process_file:64 - File path received: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3
+2026-01-11 00:41:07,218 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3
+2026-01-11 00:41:07,218 - modules.transcriber - INFO - _load_model:35 - Loading Whisper model: base
+2026-01-11 00:41:08,982 - modules.transcriber - INFO - _load_model:37 - Model loaded successfully
+2026-01-11 00:41:08,983 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 00:41:08,984 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 00:41:08,984 - modules.transcriber - INFO - transcribe:86 - Starting transcription: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3
+2026-01-11 00:41:08,985 - modules.transcriber - INFO - transcribe:93 - File exists: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3, file size: 222460 bytes
+2026-01-11 00:41:08,985 - modules.transcriber - INFO - transcribe:96 - Using mock transcription with topic-aware content
+2026-01-11 00:41:08,986 - modules.transcriber - INFO - transcribe:106 - Transcription completed. Duration: 30s, Words: 294
+2026-01-11 00:41:08,986 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 00:41:08,987 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 00:41:08,987 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 00:41:08,988 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 00:41:08,989 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 00:41:08,989 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 00:41:08,989 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:41:08,990 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:41:08,990 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 00:41:08,990 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 00:41:08,991 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 00:41:08,991 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 00:41:08,991 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 00:41:09,006 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 00:41:09,009 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c
+2026-01-11 00:41:09,035 - routes.process - INFO - process_file:63 - Processing started - Job: f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c
+2026-01-11 00:41:09,035 - routes.process - INFO - process_file:64 - File path received: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3
+2026-01-11 00:41:09,036 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3
+2026-01-11 00:41:09,037 - modules.transcriber - INFO - _load_model:35 - Loading Whisper model: base
+2026-01-11 00:41:10,499 - modules.transcriber - INFO - _load_model:37 - Model loaded successfully
+2026-01-11 00:41:10,499 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 00:41:10,500 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 00:41:10,501 - modules.transcriber - INFO - transcribe:86 - Starting transcription: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3
+2026-01-11 00:41:10,502 - modules.transcriber - INFO - transcribe:93 - File exists: ./uploads\f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c_notes.mp3, file size: 222460 bytes
+2026-01-11 00:41:10,502 - modules.transcriber - INFO - transcribe:96 - Using mock transcription with topic-aware content
+2026-01-11 00:41:10,503 - modules.transcriber - INFO - transcribe:106 - Transcription completed. Duration: 30s, Words: 294
+2026-01-11 00:41:10,503 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 00:41:10,503 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 00:41:10,504 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 00:41:10,504 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 00:41:10,505 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 00:41:10,505 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 00:41:10,505 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:41:10,506 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:41:10,506 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 00:41:10,507 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 00:41:10,507 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 00:41:10,508 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 00:41:10,508 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 00:41:10,515 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 00:41:10,517 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: f01023c3-d2ea-4d9c-aea9-3f1e3c13d23c
+2026-01-11 00:42:45,851 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:42:45,852 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:42:45,853 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:42:45,853 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:42:45,853 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:42:45,853 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:42:45,854 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:43:48,636 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b, Size: 217.25 KB
+2026-01-11 00:43:48,638 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3, File exists: True
+2026-01-11 00:43:48,657 - routes.upload - INFO - check_upload_status:108 - Status check - Job: d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b, Path: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3, Exists: True
+2026-01-11 00:43:48,662 - routes.upload - INFO - check_upload_status:108 - Status check - Job: d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b, Path: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3, Exists: True
+2026-01-11 00:43:48,673 - routes.process - INFO - process_file:63 - Processing started - Job: d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b
+2026-01-11 00:43:48,674 - routes.process - INFO - process_file:64 - File path received: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3
+2026-01-11 00:43:48,675 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3
+2026-01-11 00:43:48,676 - modules.transcriber - INFO - __init__:31 - Transcriber initialized with SpeechRecognition
+2026-01-11 00:43:48,677 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 00:43:48,679 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 00:43:48,679 - modules.transcriber - INFO - transcribe:76 - Starting transcription: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3
+2026-01-11 00:43:48,680 - modules.transcriber - INFO - transcribe:83 - File exists: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3, file size: 222460 bytes
+2026-01-11 00:43:48,680 - modules.transcriber - INFO - transcribe:87 - Loading audio from .mp3 file
+2026-01-11 00:43:48,733 - modules.transcriber - ERROR - transcribe:92 - Failed to load audio: [WinError 2] The system cannot find the file specified
+2026-01-11 00:43:48,733 - modules.transcriber - ERROR - transcribe:171 - Transcription failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\modules\transcriber.py", line 90, in transcribe
+    audio = AudioSegment.from_file(file_path)
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\venv\Lib\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\venv\Lib\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Users\gaura\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gaura\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2026-01-11 00:43:48,858 - modules.transcriber - INFO - transcribe:173 - Falling back to mock transcription
+2026-01-11 00:43:48,859 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 00:43:48,860 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 00:43:48,860 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 00:43:48,862 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 00:43:48,862 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 00:43:48,862 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 00:43:48,863 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:43:48,863 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:43:48,863 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 00:43:48,864 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 00:43:48,864 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 00:43:48,865 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 00:43:48,865 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 00:43:48,878 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 00:43:48,881 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b
+2026-01-11 00:43:48,885 - routes.process - INFO - process_file:63 - Processing started - Job: d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b
+2026-01-11 00:43:48,885 - routes.process - INFO - process_file:64 - File path received: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3
+2026-01-11 00:43:48,886 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3
+2026-01-11 00:43:48,886 - modules.transcriber - INFO - __init__:31 - Transcriber initialized with SpeechRecognition
+2026-01-11 00:43:48,887 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 00:43:48,887 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 00:43:48,888 - modules.transcriber - INFO - transcribe:76 - Starting transcription: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3
+2026-01-11 00:43:48,888 - modules.transcriber - INFO - transcribe:83 - File exists: ./uploads\d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b_notes.mp3, file size: 222460 bytes
+2026-01-11 00:43:48,889 - modules.transcriber - INFO - transcribe:87 - Loading audio from .mp3 file
+2026-01-11 00:43:48,903 - modules.transcriber - ERROR - transcribe:92 - Failed to load audio: [WinError 2] The system cannot find the file specified
+2026-01-11 00:43:48,904 - modules.transcriber - ERROR - transcribe:171 - Transcription failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\modules\transcriber.py", line 90, in transcribe
+    audio = AudioSegment.from_file(file_path)
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\venv\Lib\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\venv\Lib\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Users\gaura\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gaura\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2026-01-11 00:43:48,907 - modules.transcriber - INFO - transcribe:173 - Falling back to mock transcription
+2026-01-11 00:43:48,908 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 00:43:48,908 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 00:43:48,908 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 00:43:48,909 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 00:43:48,909 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 00:43:48,909 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 00:43:48,910 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:43:48,910 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 00:43:48,910 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 00:43:48,911 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 00:43:48,911 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 00:43:48,912 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 00:43:48,912 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 00:43:48,916 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 00:43:48,918 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: d7be58af-f8e5-4eb8-9e5e-77c8a08aa18b
+2026-01-11 00:44:40,738 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:44:40,740 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:44:40,740 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:44:40,740 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:44:40,740 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:44:40,741 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:44:40,742 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:45:03,485 - __main__ - INFO - shutdown_event:133 - Shutting down Autonotes Generation API
+2026-01-11 00:45:09,955 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:45:09,956 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:45:09,957 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:45:09,957 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:45:09,957 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:45:09,958 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:45:09,958 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:46:46,559 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:46:46,560 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:46:46,560 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:46:46,560 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:46:46,560 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:46:46,561 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:46:46,561 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:47:38,233 - __main__ - INFO - startup_event:115 - Starting Autonotes Generation API
+2026-01-11 00:47:38,234 - __main__ - INFO - startup_event:116 - Debug mode: True
+2026-01-11 00:47:38,234 - __main__ - INFO - startup_event:117 - Whisper Model: base
+2026-01-11 00:47:38,234 - __main__ - INFO - startup_event:118 - Device: cpu
+2026-01-11 00:47:38,235 - __main__ - INFO - startup_event:119 - Upload Directory: ./uploads
+2026-01-11 00:47:38,235 - __main__ - INFO - startup_event:120 - Output Directory: ./output
+2026-01-11 00:47:38,236 - __main__ - INFO - startup_event:126 - Directories created/verified
+2026-01-11 00:49:39,335 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-01-11 00:49:39,336 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-01-11 00:49:39,336 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-01-11 00:49:39,337 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-01-11 00:49:39,337 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-01-11 00:49:39,337 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-01-11 00:49:39,338 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-01-11 00:50:10,128 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-01-11 00:50:10,129 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-01-11 00:50:10,129 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-01-11 00:50:10,129 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-01-11 00:50:10,129 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-01-11 00:50:10,130 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-01-11 00:50:10,131 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-01-11 01:00:33,561 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: c6617937-2397-4aaa-b348-44fc0f27597b, Size: 217.25 KB
+2026-01-11 01:00:33,564 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3, File exists: True
+2026-01-11 01:00:33,581 - routes.upload - INFO - check_upload_status:108 - Status check - Job: c6617937-2397-4aaa-b348-44fc0f27597b, Path: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3, Exists: True
+2026-01-11 01:00:33,586 - routes.upload - INFO - check_upload_status:108 - Status check - Job: c6617937-2397-4aaa-b348-44fc0f27597b, Path: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3, Exists: True
+2026-01-11 01:00:33,620 - routes.process - INFO - process_file:63 - Processing started - Job: c6617937-2397-4aaa-b348-44fc0f27597b
+2026-01-11 01:00:33,620 - routes.process - INFO - process_file:64 - File path received: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3
+2026-01-11 01:00:33,621 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3
+2026-01-11 01:00:33,625 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-01-11 01:00:33,626 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 01:00:33,628 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 01:00:33,629 - modules.transcriber - INFO - transcribe:77 - Starting transcription: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3
+2026-01-11 01:00:33,629 - modules.transcriber - INFO - transcribe:84 - File exists: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3, file size: 222460 bytes
+2026-01-11 01:00:33,630 - modules.transcriber - INFO - transcribe:88 - Loading audio from .mp3 file
+2026-01-11 01:00:33,678 - modules.transcriber - ERROR - transcribe:93 - Failed to load audio: [WinError 2] The system cannot find the file specified
+2026-01-11 01:00:33,679 - modules.transcriber - ERROR - transcribe:172 - Transcription failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\modules\transcriber.py", line 91, in transcribe
+    audio = AudioSegment.from_file(file_path)
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\venv\Lib\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\venv\Lib\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Users\gaura\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gaura\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2026-01-11 01:00:33,711 - modules.transcriber - INFO - transcribe:174 - Falling back to mock transcription
+2026-01-11 01:00:33,714 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 01:00:33,714 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 01:00:33,715 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 01:00:33,717 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 01:00:33,718 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 01:00:33,718 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 01:00:33,718 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 01:00:33,719 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 01:00:33,719 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 01:00:33,719 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 01:00:33,720 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 01:00:33,720 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 01:00:33,720 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 01:00:33,754 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 01:00:33,758 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: c6617937-2397-4aaa-b348-44fc0f27597b
+2026-01-11 01:00:33,761 - routes.process - INFO - process_file:63 - Processing started - Job: c6617937-2397-4aaa-b348-44fc0f27597b
+2026-01-11 01:00:33,761 - routes.process - INFO - process_file:64 - File path received: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3
+2026-01-11 01:00:33,761 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3
+2026-01-11 01:00:33,762 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-01-11 01:00:33,762 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 01:00:33,763 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 01:00:33,763 - modules.transcriber - INFO - transcribe:77 - Starting transcription: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3
+2026-01-11 01:00:33,764 - modules.transcriber - INFO - transcribe:84 - File exists: ./uploads\c6617937-2397-4aaa-b348-44fc0f27597b_notes.mp3, file size: 222460 bytes
+2026-01-11 01:00:33,764 - modules.transcriber - INFO - transcribe:88 - Loading audio from .mp3 file
+2026-01-11 01:00:33,781 - modules.transcriber - ERROR - transcribe:93 - Failed to load audio: [WinError 2] The system cannot find the file specified
+2026-01-11 01:00:33,781 - modules.transcriber - ERROR - transcribe:172 - Transcription failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\modules\transcriber.py", line 91, in transcribe
+    audio = AudioSegment.from_file(file_path)
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\venv\Lib\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\gaura\Downloads\autonotes-generation\backend\venv\Lib\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Users\gaura\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gaura\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1550, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2026-01-11 01:00:33,785 - modules.transcriber - INFO - transcribe:174 - Falling back to mock transcription
+2026-01-11 01:00:33,786 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 01:00:33,787 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 01:00:33,787 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 01:00:33,788 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 01:00:33,788 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 01:00:33,789 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 01:00:33,789 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 01:00:33,790 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 01:00:33,790 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 01:00:33,791 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 01:00:33,791 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 01:00:33,791 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 01:00:33,792 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 01:00:33,799 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 01:00:33,802 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: c6617937-2397-4aaa-b348-44fc0f27597b
+2026-01-11 01:01:52,780 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-01-11 01:01:52,781 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-01-11 01:01:52,781 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-01-11 01:01:52,781 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-01-11 01:01:52,782 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-01-11 01:01:52,782 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-01-11 01:01:52,783 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-01-11 01:03:01,512 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 1f7f2ee5-778f-429c-b300-83644b56210e, Size: 217.25 KB
+2026-01-11 01:03:01,513 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3, File exists: True
+2026-01-11 01:03:01,530 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 1f7f2ee5-778f-429c-b300-83644b56210e, Path: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3, Exists: True
+2026-01-11 01:03:01,535 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 1f7f2ee5-778f-429c-b300-83644b56210e, Path: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3, Exists: True
+2026-01-11 01:03:01,549 - routes.process - INFO - process_file:63 - Processing started - Job: 1f7f2ee5-778f-429c-b300-83644b56210e
+2026-01-11 01:03:01,550 - routes.process - INFO - process_file:64 - File path received: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3
+2026-01-11 01:03:01,550 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3
+2026-01-11 01:03:01,551 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-01-11 01:03:01,552 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 01:03:01,553 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 01:03:01,554 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3
+2026-01-11 01:03:01,555 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3, size: 222460 bytes
+2026-01-11 01:03:01,555 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-01-11 01:03:01,598 - modules.transcriber - ERROR - transcribe:96 - Failed to load audio: [WinError 2] The system cannot find the file specified
+2026-01-11 01:03:01,598 - modules.transcriber - WARNING - transcribe:98 - Falling back to mock transcription due to load error
+2026-01-11 01:03:01,600 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 01:03:01,600 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 01:03:01,601 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 01:03:01,602 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 01:03:01,602 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 01:03:01,603 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 01:03:01,603 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 01:03:01,603 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 01:03:01,603 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 01:03:01,604 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 01:03:01,604 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 01:03:01,605 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 01:03:01,605 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 01:03:01,618 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 01:03:01,620 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 1f7f2ee5-778f-429c-b300-83644b56210e
+2026-01-11 01:03:01,625 - routes.process - INFO - process_file:63 - Processing started - Job: 1f7f2ee5-778f-429c-b300-83644b56210e
+2026-01-11 01:03:01,625 - routes.process - INFO - process_file:64 - File path received: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3
+2026-01-11 01:03:01,626 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3
+2026-01-11 01:03:01,626 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-01-11 01:03:01,627 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-11 01:03:01,628 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-11 01:03:01,628 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3
+2026-01-11 01:03:01,629 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\1f7f2ee5-778f-429c-b300-83644b56210e_notes.mp3, size: 222460 bytes
+2026-01-11 01:03:01,629 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-01-11 01:03:01,643 - modules.transcriber - ERROR - transcribe:96 - Failed to load audio: [WinError 2] The system cannot find the file specified
+2026-01-11 01:03:01,643 - modules.transcriber - WARNING - transcribe:98 - Falling back to mock transcription due to load error
+2026-01-11 01:03:01,644 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-01-11 01:03:01,644 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-11 01:03:01,645 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-11 01:03:01,645 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 21
+2026-01-11 01:03:01,645 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-11 01:03:01,646 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-11 01:03:01,646 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 01:03:01,647 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-11 01:03:01,647 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-11 01:03:01,648 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-11 01:03:01,648 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-11 01:03:01,649 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-11 01:03:01,649 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-11 01:03:01,654 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-11 01:03:01,656 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 1f7f2ee5-778f-429c-b300-83644b56210e
+2026-01-18 17:15:12,392 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-01-18 17:15:12,392 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-01-18 17:15:12,393 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-01-18 17:15:12,393 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-01-18 17:15:12,393 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-01-18 17:15:12,394 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-01-18 17:15:12,394 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-01-18 17:16:20,863 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-01-18 17:16:20,865 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-01-18 17:16:20,865 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-01-18 17:16:20,866 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-01-18 17:16:20,866 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-01-18 17:16:20,866 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-01-18 17:16:20,868 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-01-18 17:17:20,254 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d, Size: 217.25 KB
+2026-01-18 17:17:20,255 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3, File exists: True
+2026-01-18 17:17:20,311 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d, Path: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3, Exists: True
+2026-01-18 17:17:20,317 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d, Path: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3, Exists: True
+2026-01-18 17:17:20,340 - routes.process - INFO - process_file:63 - Processing started - Job: 9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d
+2026-01-18 17:17:20,340 - routes.process - INFO - process_file:64 - File path received: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3
+2026-01-18 17:17:20,341 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3
+2026-01-18 17:17:20,342 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-01-18 17:17:20,342 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-18 17:17:20,343 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-18 17:17:20,344 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3
+2026-01-18 17:17:20,344 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3, size: 222460 bytes
+2026-01-18 17:17:20,345 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-01-18 17:17:23,267 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-01-18 17:17:23,268 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-01-18 17:17:23,273 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-01-18 17:17:23,314 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-01-18 17:17:30,983 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-01-18 17:17:30,983 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-01-18 17:17:30,985 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-01-18 17:17:30,985 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-18 17:17:30,985 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-18 17:17:30,987 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 39
+2026-01-18 17:17:30,987 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-18 17:17:30,988 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-18 17:17:30,988 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-18 17:17:30,989 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-18 17:17:30,989 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-18 17:17:30,990 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-18 17:17:30,990 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-18 17:17:30,990 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-18 17:17:30,991 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-18 17:17:31,004 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-18 17:17:31,007 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d
+2026-01-18 17:17:31,015 - routes.process - INFO - process_file:63 - Processing started - Job: 9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d
+2026-01-18 17:17:31,015 - routes.process - INFO - process_file:64 - File path received: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3
+2026-01-18 17:17:31,016 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3
+2026-01-18 17:17:31,017 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-01-18 17:17:31,017 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-18 17:17:31,018 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-18 17:17:31,018 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3
+2026-01-18 17:17:31,019 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.mp3, size: 222460 bytes
+2026-01-18 17:17:31,019 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-01-18 17:17:31,342 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-01-18 17:17:31,342 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-01-18 17:17:31,346 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-01-18 17:17:31,385 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-01-18 17:17:44,090 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-01-18 17:17:44,090 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-01-18 17:17:44,091 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-01-18 17:17:44,092 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-18 17:17:44,092 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-18 17:17:44,093 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 39
+2026-01-18 17:17:44,093 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-18 17:17:44,094 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-18 17:17:44,094 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-18 17:17:44,094 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-18 17:17:44,095 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-18 17:17:44,095 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-18 17:17:44,096 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-18 17:17:44,096 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-18 17:17:44,096 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-18 17:17:44,101 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-18 17:17:44,103 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d
+2026-01-18 17:17:49,837 - modules.note_generator - INFO - export_pdf:188 - PDF file saved: ./output\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.pdf
+2026-01-18 17:17:52,910 - modules.note_generator - INFO - export_docx:215 - DOCX file saved: ./output\9db6c3b7-6cbe-4ac3-9778-bc1c966fe97d_notes.docx
+2026-01-18 17:46:13,184 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a, Size: 217.25 KB
+2026-01-18 17:46:13,199 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3, File exists: True
+2026-01-18 17:46:13,255 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a, Path: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3, Exists: True
+2026-01-18 17:46:13,261 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a, Path: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3, Exists: True
+2026-01-18 17:46:13,287 - routes.process - INFO - process_file:63 - Processing started - Job: 910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a
+2026-01-18 17:46:13,287 - routes.process - INFO - process_file:64 - File path received: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3
+2026-01-18 17:46:13,288 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3
+2026-01-18 17:46:13,293 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-01-18 17:46:13,294 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-18 17:46:13,295 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-18 17:46:13,296 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3
+2026-01-18 17:46:13,297 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3, size: 222460 bytes
+2026-01-18 17:46:13,301 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-01-18 17:46:16,575 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-01-18 17:46:16,576 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-01-18 17:46:16,584 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-01-18 17:46:16,632 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-01-18 17:46:22,168 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-01-18 17:46:22,169 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-01-18 17:46:22,170 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-01-18 17:46:22,171 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-18 17:46:22,171 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-18 17:46:22,173 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 39
+2026-01-18 17:46:22,174 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-18 17:46:22,174 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-18 17:46:22,175 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-18 17:46:22,176 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-18 17:46:22,176 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-18 17:46:22,176 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-18 17:46:22,177 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-18 17:46:22,177 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-18 17:46:22,178 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-18 17:46:22,208 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-18 17:46:22,215 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a
+2026-01-18 17:46:22,223 - routes.process - INFO - process_file:63 - Processing started - Job: 910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a
+2026-01-18 17:46:22,224 - routes.process - INFO - process_file:64 - File path received: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3
+2026-01-18 17:46:22,225 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3
+2026-01-18 17:46:22,225 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-01-18 17:46:22,226 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-01-18 17:46:22,227 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-01-18 17:46:22,227 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3
+2026-01-18 17:46:22,228 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.mp3, size: 222460 bytes
+2026-01-18 17:46:22,231 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-01-18 17:46:22,455 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-01-18 17:46:22,456 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-01-18 17:46:22,460 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-01-18 17:46:22,492 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-01-18 17:46:30,589 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-01-18 17:46:30,590 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-01-18 17:46:30,591 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-01-18 17:46:30,591 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-01-18 17:46:30,591 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-01-18 17:46:30,592 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 39
+2026-01-18 17:46:30,593 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-01-18 17:46:30,593 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-01-18 17:46:30,593 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-18 17:46:30,594 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-01-18 17:46:30,594 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-01-18 17:46:30,594 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-01-18 17:46:30,595 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-01-18 17:46:30,595 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-01-18 17:46:30,595 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-01-18 17:46:30,602 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-01-18 17:46:30,604 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a
+2026-01-18 17:46:56,078 - modules.note_generator - INFO - export_pdf:188 - PDF file saved: ./output\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.pdf
+2026-01-18 17:46:56,608 - modules.note_generator - INFO - export_docx:215 - DOCX file saved: ./output\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.docx
+2026-01-18 17:47:07,886 - modules.note_generator - INFO - export_markdown:156 - Markdown file saved: ./output\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.md
