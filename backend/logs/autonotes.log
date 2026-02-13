@@ -727,3 +727,1074 @@ FileNotFoundError: [WinError 2] The system cannot find the file specified
 2026-01-18 17:46:56,078 - modules.note_generator - INFO - export_pdf:188 - PDF file saved: ./output\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.pdf
 2026-01-18 17:46:56,608 - modules.note_generator - INFO - export_docx:215 - DOCX file saved: ./output\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.docx
 2026-01-18 17:47:07,886 - modules.note_generator - INFO - export_markdown:156 - Markdown file saved: ./output\910d5bf4-e7cb-4b9d-8c11-7d906b6fee5a_notes.md
+2026-02-13 19:50:06,047 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 19:50:06,048 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 19:50:06,048 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 19:50:06,049 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 19:50:06,049 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 19:50:06,050 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 19:50:06,052 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 19:50:43,278 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: b657b096-1fd0-4e89-8091-f3fb13aeb13f, Size: 217.25 KB
+2026-02-13 19:50:43,279 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3, File exists: True
+2026-02-13 19:50:43,297 - routes.upload - INFO - check_upload_status:108 - Status check - Job: b657b096-1fd0-4e89-8091-f3fb13aeb13f, Path: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3, Exists: True
+2026-02-13 19:50:43,301 - routes.upload - INFO - check_upload_status:108 - Status check - Job: b657b096-1fd0-4e89-8091-f3fb13aeb13f, Path: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3, Exists: True
+2026-02-13 19:50:43,343 - routes.process - INFO - process_file:63 - Processing started - Job: b657b096-1fd0-4e89-8091-f3fb13aeb13f
+2026-02-13 19:50:43,343 - routes.process - INFO - process_file:64 - File path received: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3
+2026-02-13 19:50:43,344 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3
+2026-02-13 19:50:43,344 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 19:50:43,345 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-02-13 19:50:43,346 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 19:50:43,346 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3
+2026-02-13 19:50:43,348 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3, size: 222460 bytes
+2026-02-13 19:50:43,348 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 19:50:46,127 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 19:50:46,128 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 19:50:46,133 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 19:50:46,166 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 19:50:51,785 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 19:50:51,785 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 19:50:51,787 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 19:50:51,787 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 19:50:51,787 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-02-13 19:50:51,789 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 39
+2026-02-13 19:50:51,789 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 19:50:51,790 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 19:50:51,790 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-02-13 19:50:51,791 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-02-13 19:50:51,791 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-02-13 19:50:51,792 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-02-13 19:50:51,792 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-02-13 19:50:51,792 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 19:50:51,793 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-02-13 19:50:51,806 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-02-13 19:50:51,809 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: b657b096-1fd0-4e89-8091-f3fb13aeb13f
+2026-02-13 19:50:51,815 - routes.process - INFO - process_file:63 - Processing started - Job: b657b096-1fd0-4e89-8091-f3fb13aeb13f
+2026-02-13 19:50:51,816 - routes.process - INFO - process_file:64 - File path received: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3
+2026-02-13 19:50:51,818 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3
+2026-02-13 19:50:51,818 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 19:50:51,818 - modules.summarizer - INFO - __init__:21 - Summarizer initialized (simple mode)
+2026-02-13 19:50:51,819 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 19:50:51,820 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3
+2026-02-13 19:50:51,820 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\b657b096-1fd0-4e89-8091-f3fb13aeb13f_notes.mp3, size: 222460 bytes
+2026-02-13 19:50:51,821 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 19:50:52,031 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 19:50:52,032 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 19:50:52,035 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 19:50:52,074 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 19:50:56,640 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 19:50:56,641 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 19:50:56,642 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 19:50:56,642 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 19:50:56,643 - modules.processor - INFO - process_transcript:132 - Starting text processing
+2026-02-13 19:50:56,643 - modules.processor - INFO - process_transcript:154 - Processing complete. Sections: 1, Words: 39
+2026-02-13 19:50:56,644 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 19:50:56,644 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 19:50:56,645 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-02-13 19:50:56,645 - modules.summarizer - WARNING - summarize:29 - Text too short to summarize
+2026-02-13 19:50:56,646 - modules.summarizer - INFO - summarize_sections:79 - Summarized 1 sections
+2026-02-13 19:50:56,646 - modules.summarizer - INFO - extract_bullet_points:99 - Extracted 1 bullet points
+2026-02-13 19:50:56,647 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-02-13 19:50:56,647 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 19:50:56,647 - modules.note_generator - INFO - generate_note_content:53 - Generating note content for: notes
+2026-02-13 19:50:56,654 - modules.note_generator - INFO - generate_note_content:75 - Note content generated successfully
+2026-02-13 19:50:56,657 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: b657b096-1fd0-4e89-8091-f3fb13aeb13f
+2026-02-13 20:08:26,499 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:08:26,500 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:08:26,500 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:08:26,501 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:08:26,501 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:08:26,501 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:08:26,503 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:10:13,895 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: e9271865-f708-440c-8452-3313e1ffc924, Size: 217.25 KB
+2026-02-13 20:10:13,896 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3, File exists: True
+2026-02-13 20:10:13,974 - routes.upload - INFO - check_upload_status:108 - Status check - Job: e9271865-f708-440c-8452-3313e1ffc924, Path: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3, Exists: True
+2026-02-13 20:10:13,986 - routes.upload - INFO - check_upload_status:108 - Status check - Job: e9271865-f708-440c-8452-3313e1ffc924, Path: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3, Exists: True
+2026-02-13 20:10:14,009 - routes.process - INFO - process_file:63 - Processing started - Job: e9271865-f708-440c-8452-3313e1ffc924
+2026-02-13 20:10:14,033 - routes.process - INFO - process_file:64 - File path received: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3
+2026-02-13 20:10:14,044 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3
+2026-02-13 20:10:14,045 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:10:14,049 - modules.summarizer - INFO - __init__:32 - Summarizer initialized (extractive mode)
+2026-02-13 20:10:14,076 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:10:14,077 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3
+2026-02-13 20:10:14,079 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3, size: 222460 bytes
+2026-02-13 20:10:14,080 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:10:16,707 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 20:10:16,708 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:10:16,723 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:10:16,765 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:10:20,883 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 20:10:20,884 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 20:10:20,885 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 20:10:20,885 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:10:20,886 - modules.processor - INFO - process_transcript:317 - Starting text processing
+2026-02-13 20:10:20,890 - modules.processor - INFO - process_transcript:339 - Processing complete. Topics: 1, Words: 39
+2026-02-13 20:10:20,891 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 20:10:20,891 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:10:20,892 - modules.summarizer - INFO - summarize_sections:163 - Summarized 1 sections
+2026-02-13 20:10:20,892 - modules.summarizer - INFO - extract_bullet_points:198 - Extracted 1 bullet points
+2026-02-13 20:10:20,893 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-02-13 20:10:20,893 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:10:20,894 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: notes
+2026-02-13 20:10:21,031 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:10:21,033 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: e9271865-f708-440c-8452-3313e1ffc924
+2026-02-13 20:10:21,038 - routes.process - INFO - process_file:63 - Processing started - Job: e9271865-f708-440c-8452-3313e1ffc924
+2026-02-13 20:10:21,039 - routes.process - INFO - process_file:64 - File path received: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3
+2026-02-13 20:10:21,039 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3
+2026-02-13 20:10:21,040 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:10:21,040 - modules.summarizer - INFO - __init__:32 - Summarizer initialized (extractive mode)
+2026-02-13 20:10:21,041 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:10:21,042 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3
+2026-02-13 20:10:21,042 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\e9271865-f708-440c-8452-3313e1ffc924_notes.mp3, size: 222460 bytes
+2026-02-13 20:10:21,043 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:10:21,248 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 20:10:21,248 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:10:21,252 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:10:21,281 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:10:24,755 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 20:10:24,755 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 20:10:24,756 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 20:10:24,757 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:10:24,757 - modules.processor - INFO - process_transcript:317 - Starting text processing
+2026-02-13 20:10:24,758 - modules.processor - INFO - process_transcript:339 - Processing complete. Topics: 1, Words: 39
+2026-02-13 20:10:24,759 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 20:10:24,760 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:10:24,760 - modules.summarizer - INFO - summarize_sections:163 - Summarized 1 sections
+2026-02-13 20:10:24,761 - modules.summarizer - INFO - extract_bullet_points:198 - Extracted 1 bullet points
+2026-02-13 20:10:24,761 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-02-13 20:10:24,761 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:10:24,762 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: notes
+2026-02-13 20:10:24,774 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:10:24,776 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: e9271865-f708-440c-8452-3313e1ffc924
+2026-02-13 20:13:48,636 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 49cd8407-0bca-40ee-9948-043349f877e5, Size: 217.25 KB
+2026-02-13 20:13:48,638 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3, File exists: True
+2026-02-13 20:13:48,654 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 49cd8407-0bca-40ee-9948-043349f877e5, Path: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3, Exists: True
+2026-02-13 20:13:48,661 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 49cd8407-0bca-40ee-9948-043349f877e5, Path: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3, Exists: True
+2026-02-13 20:13:48,679 - routes.process - INFO - process_file:63 - Processing started - Job: 49cd8407-0bca-40ee-9948-043349f877e5
+2026-02-13 20:13:48,680 - routes.process - INFO - process_file:64 - File path received: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3
+2026-02-13 20:13:48,680 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3
+2026-02-13 20:13:48,681 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:13:48,681 - modules.summarizer - INFO - __init__:32 - Summarizer initialized (extractive mode)
+2026-02-13 20:13:48,682 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:13:48,683 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3
+2026-02-13 20:13:48,683 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3, size: 222460 bytes
+2026-02-13 20:13:48,684 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:13:48,985 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 20:13:48,985 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:13:48,989 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:13:49,028 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:13:52,418 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 20:13:52,419 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 20:13:52,420 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 20:13:52,420 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:13:52,421 - modules.processor - INFO - process_transcript:317 - Starting text processing
+2026-02-13 20:13:52,422 - modules.processor - INFO - process_transcript:339 - Processing complete. Topics: 1, Words: 39
+2026-02-13 20:13:52,422 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 20:13:52,423 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:13:52,423 - modules.summarizer - INFO - summarize_sections:163 - Summarized 1 sections
+2026-02-13 20:13:52,424 - modules.summarizer - INFO - extract_bullet_points:198 - Extracted 1 bullet points
+2026-02-13 20:13:52,424 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-02-13 20:13:52,425 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:13:52,425 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: notes
+2026-02-13 20:13:52,435 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:13:52,437 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 49cd8407-0bca-40ee-9948-043349f877e5
+2026-02-13 20:13:52,442 - routes.process - INFO - process_file:63 - Processing started - Job: 49cd8407-0bca-40ee-9948-043349f877e5
+2026-02-13 20:13:52,443 - routes.process - INFO - process_file:64 - File path received: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3
+2026-02-13 20:13:52,443 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3
+2026-02-13 20:13:52,444 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:13:52,445 - modules.summarizer - INFO - __init__:32 - Summarizer initialized (extractive mode)
+2026-02-13 20:13:52,446 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:13:52,446 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3
+2026-02-13 20:13:52,450 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\49cd8407-0bca-40ee-9948-043349f877e5_notes.mp3, size: 222460 bytes
+2026-02-13 20:13:52,452 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:13:52,695 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 20:13:52,697 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:13:52,704 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:13:52,750 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:13:55,889 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 20:13:55,890 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 20:13:55,891 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 20:13:55,892 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:13:55,894 - modules.processor - INFO - process_transcript:317 - Starting text processing
+2026-02-13 20:13:55,895 - modules.processor - INFO - process_transcript:339 - Processing complete. Topics: 1, Words: 39
+2026-02-13 20:13:55,895 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 20:13:55,896 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:13:55,897 - modules.summarizer - INFO - summarize_sections:163 - Summarized 1 sections
+2026-02-13 20:13:55,898 - modules.summarizer - INFO - extract_bullet_points:198 - Extracted 1 bullet points
+2026-02-13 20:13:55,898 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-02-13 20:13:55,899 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:13:55,899 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: notes
+2026-02-13 20:13:55,909 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:13:55,911 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 49cd8407-0bca-40ee-9948-043349f877e5
+2026-02-13 20:29:07,739 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:29:12,501 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:29:12,502 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:29:12,502 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:29:12,503 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:29:12,503 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:29:12,503 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:29:12,505 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:31:50,572 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:31:53,663 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:31:53,663 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:31:53,664 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:31:53,664 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:31:53,665 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:31:53,665 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:31:53,667 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:32:09,086 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:32:12,057 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:32:12,057 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:32:12,058 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:32:12,058 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:32:12,059 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:32:12,059 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:32:12,060 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:35:25,157 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:35:28,163 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:35:28,164 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:35:28,164 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:35:28,165 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:35:28,165 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:35:28,166 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:35:28,167 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:35:58,881 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:36:01,749 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:36:01,749 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:36:01,750 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:36:01,750 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:36:01,751 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:36:01,751 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:36:01,752 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:37:12,145 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:37:15,139 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:37:15,139 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:37:15,140 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:37:15,140 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:37:15,141 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:37:15,141 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:37:15,142 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:38:09,949 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:38:12,851 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:38:12,851 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:38:12,852 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:38:12,852 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:38:12,853 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:38:12,853 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:38:12,854 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:39:30,404 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:39:33,349 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:39:33,349 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:39:33,350 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:39:33,350 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:39:33,351 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:39:33,351 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:39:33,353 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:39:49,139 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:39:52,152 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:39:52,153 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:39:52,153 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:39:52,154 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:39:52,154 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:39:52,154 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:39:52,156 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:40:17,407 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:40:17,408 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:40:17,408 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:40:17,409 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:40:17,409 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:40:17,409 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:40:17,410 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:40:58,708 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:40:58,709 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:40:58,709 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:40:58,709 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:40:58,710 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:40:58,710 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:40:58,711 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:42:05,404 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:42:05,404 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:42:05,405 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:42:05,405 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:42:05,406 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:42:05,406 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:42:05,408 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:42:51,138 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: e21f7385-c154-4e6c-8830-87e6814a4bf6, Size: 217.25 KB
+2026-02-13 20:42:51,138 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3, File exists: True
+2026-02-13 20:42:51,156 - routes.upload - INFO - check_upload_status:108 - Status check - Job: e21f7385-c154-4e6c-8830-87e6814a4bf6, Path: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3, Exists: True
+2026-02-13 20:42:51,160 - routes.upload - INFO - check_upload_status:108 - Status check - Job: e21f7385-c154-4e6c-8830-87e6814a4bf6, Path: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3, Exists: True
+2026-02-13 20:42:51,194 - routes.process - INFO - process_file:63 - Processing started - Job: e21f7385-c154-4e6c-8830-87e6814a4bf6
+2026-02-13 20:42:51,194 - routes.process - INFO - process_file:64 - File path received: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3
+2026-02-13 20:42:51,195 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3
+2026-02-13 20:42:51,195 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:42:51,196 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:42:51,197 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:42:51,197 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3
+2026-02-13 20:42:51,198 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3, size: 222460 bytes
+2026-02-13 20:42:51,198 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:42:54,653 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 20:42:54,653 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:42:54,660 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:42:54,705 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:42:59,039 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 20:42:59,040 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 20:42:59,042 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 20:42:59,043 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:42:59,043 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:42:59,045 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:42:59,052 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 1, Words: 39
+2026-02-13 20:42:59,053 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 20:42:59,053 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:42:59,054 - modules.summarizer - INFO - summarize:133 - Summarizing text (39 words, 2 sentences)
+2026-02-13 20:42:59,065 - modules.summarizer - INFO - summarize:133 - Summarizing text (39 words, 2 sentences)
+2026-02-13 20:42:59,081 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 2 bullet points
+2026-02-13 20:42:59,081 - routes.process - INFO - process_file:123 - Summarization complete: 2 bullet points
+2026-02-13 20:42:59,082 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:42:59,082 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: notes
+2026-02-13 20:42:59,225 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:42:59,227 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: e21f7385-c154-4e6c-8830-87e6814a4bf6
+2026-02-13 20:42:59,232 - routes.process - INFO - process_file:63 - Processing started - Job: e21f7385-c154-4e6c-8830-87e6814a4bf6
+2026-02-13 20:42:59,233 - routes.process - INFO - process_file:64 - File path received: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3
+2026-02-13 20:42:59,234 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3
+2026-02-13 20:42:59,234 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:42:59,234 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:42:59,235 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:42:59,236 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3
+2026-02-13 20:42:59,236 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\e21f7385-c154-4e6c-8830-87e6814a4bf6_notes.mp3, size: 222460 bytes
+2026-02-13 20:42:59,237 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:42:59,464 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 20:42:59,465 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:42:59,468 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:42:59,505 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:43:10,740 - modules.transcriber - WARNING - transcribe:144 - Speech Recognition could not understand audio
+2026-02-13 20:43:10,741 - modules.transcriber - ERROR - transcribe:151 - Real transcription failed: 
+2026-02-13 20:43:10,742 - modules.transcriber - WARNING - transcribe:152 - Falling back to mock transcription
+2026-02-13 20:43:10,743 - routes.process - INFO - process_file:89 - Transcription complete: 30s, 294 words
+2026-02-13 20:43:10,743 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:43:10,743 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:43:10,744 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:43:10,747 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 1, Words: 21
+2026-02-13 20:43:10,747 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 20:43:10,748 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:43:10,749 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 1 bullet points
+2026-02-13 20:43:10,750 - routes.process - INFO - process_file:123 - Summarization complete: 1 bullet points
+2026-02-13 20:43:10,750 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:43:10,751 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: notes
+2026-02-13 20:43:10,764 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:43:10,766 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: e21f7385-c154-4e6c-8830-87e6814a4bf6
+2026-02-13 20:44:12,735 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: cabfbe7a-2dba-4d68-8022-273972969755, Size: 217.25 KB
+2026-02-13 20:44:12,735 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3, File exists: True
+2026-02-13 20:44:12,745 - routes.upload - INFO - check_upload_status:108 - Status check - Job: cabfbe7a-2dba-4d68-8022-273972969755, Path: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3, Exists: True
+2026-02-13 20:44:12,749 - routes.upload - INFO - check_upload_status:108 - Status check - Job: cabfbe7a-2dba-4d68-8022-273972969755, Path: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3, Exists: True
+2026-02-13 20:44:12,754 - routes.process - INFO - process_file:63 - Processing started - Job: cabfbe7a-2dba-4d68-8022-273972969755
+2026-02-13 20:44:12,754 - routes.process - INFO - process_file:64 - File path received: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3
+2026-02-13 20:44:12,755 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3
+2026-02-13 20:44:12,756 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:44:12,757 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:44:12,758 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:44:12,758 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3
+2026-02-13 20:44:12,758 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3, size: 222460 bytes
+2026-02-13 20:44:12,759 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:44:13,039 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 20:44:13,039 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:44:13,043 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:44:13,086 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:44:16,402 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 20:44:16,405 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 20:44:16,406 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 20:44:16,407 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:44:16,408 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:44:16,408 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:44:16,410 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 1, Words: 39
+2026-02-13 20:44:16,411 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 20:44:16,411 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:44:16,411 - modules.summarizer - INFO - summarize:133 - Summarizing text (39 words, 2 sentences)
+2026-02-13 20:44:16,422 - modules.summarizer - INFO - summarize:133 - Summarizing text (39 words, 2 sentences)
+2026-02-13 20:44:16,435 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 2 bullet points
+2026-02-13 20:44:16,436 - routes.process - INFO - process_file:123 - Summarization complete: 2 bullet points
+2026-02-13 20:44:16,436 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:44:16,437 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: notes
+2026-02-13 20:44:16,447 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:44:16,450 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: cabfbe7a-2dba-4d68-8022-273972969755
+2026-02-13 20:44:16,454 - routes.process - INFO - process_file:63 - Processing started - Job: cabfbe7a-2dba-4d68-8022-273972969755
+2026-02-13 20:44:16,455 - routes.process - INFO - process_file:64 - File path received: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3
+2026-02-13 20:44:16,455 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3
+2026-02-13 20:44:16,456 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:44:16,456 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:44:16,457 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:44:16,458 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3
+2026-02-13 20:44:16,458 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\cabfbe7a-2dba-4d68-8022-273972969755_notes.mp3, size: 222460 bytes
+2026-02-13 20:44:16,459 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:44:16,677 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 14.745s
+2026-02-13 20:44:16,677 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:44:16,681 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:44:16,723 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:44:20,045 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is the static keyword in Java the static keyword in Java is used for memory management it can b
+2026-02-13 20:44:20,046 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 39 words
+2026-02-13 20:44:20,047 - routes.process - INFO - process_file:89 - Transcription complete: 14.745s, 39 words
+2026-02-13 20:44:20,048 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:44:20,048 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:44:20,049 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:44:20,050 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 1, Words: 39
+2026-02-13 20:44:20,050 - routes.process - INFO - process_file:95 - Processing complete: 1 sections
+2026-02-13 20:44:20,051 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:44:20,051 - modules.summarizer - INFO - summarize:133 - Summarizing text (39 words, 2 sentences)
+2026-02-13 20:44:20,063 - modules.summarizer - INFO - summarize:133 - Summarizing text (39 words, 2 sentences)
+2026-02-13 20:44:20,077 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 2 bullet points
+2026-02-13 20:44:20,077 - routes.process - INFO - process_file:123 - Summarization complete: 2 bullet points
+2026-02-13 20:44:20,078 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:44:20,078 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: notes
+2026-02-13 20:44:20,089 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:44:20,092 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: cabfbe7a-2dba-4d68-8022-273972969755
+2026-02-13 20:49:53,356 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 3db2941e-c8b5-4df0-a92e-3ce1647e9ec6, Size: 340.44 KB
+2026-02-13 20:49:53,358 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, File exists: True
+2026-02-13 20:49:53,374 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 3db2941e-c8b5-4df0-a92e-3ce1647e9ec6, Path: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 20:49:53,382 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 3db2941e-c8b5-4df0-a92e-3ce1647e9ec6, Path: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 20:49:53,388 - routes.process - INFO - process_file:63 - Processing started - Job: 3db2941e-c8b5-4df0-a92e-3ce1647e9ec6
+2026-02-13 20:49:53,389 - routes.process - INFO - process_file:64 - File path received: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 20:49:53,390 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 20:49:53,391 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:49:53,391 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:49:53,393 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:49:53,393 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 20:49:53,394 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 20:49:53,395 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:49:56,520 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 20:49:56,521 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:49:56,524 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:49:56,576 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:50:19,452 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 20:50:19,453 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 20:50:19,454 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 20:50:19,455 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:50:19,455 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:50:19,457 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:50:19,460 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 20:50:19,461 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 20:50:19,461 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:50:19,463 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 20:50:19,498 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 20:50:19,515 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 20:50:19,515 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 20:50:19,516 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:50:19,516 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 20:50:19,535 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:50:19,539 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 3db2941e-c8b5-4df0-a92e-3ce1647e9ec6
+2026-02-13 20:50:19,545 - routes.process - INFO - process_file:63 - Processing started - Job: 3db2941e-c8b5-4df0-a92e-3ce1647e9ec6
+2026-02-13 20:50:19,545 - routes.process - INFO - process_file:64 - File path received: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 20:50:19,546 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 20:50:19,546 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 20:50:19,547 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:50:19,548 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 20:50:19,548 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 20:50:19,549 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 20:50:19,550 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 20:50:19,835 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 20:50:19,835 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 20:50:19,841 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 20:50:19,907 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 20:50:25,783 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 20:50:25,784 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 20:50:25,786 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 20:50:25,786 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 20:50:25,787 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:50:25,787 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:50:25,790 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 20:50:25,790 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 20:50:25,790 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 20:50:25,791 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 20:50:25,811 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 20:50:25,841 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 20:50:25,841 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 20:50:25,842 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 20:50:25,843 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 20:50:25,865 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:50:25,867 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 3db2941e-c8b5-4df0-a92e-3ce1647e9ec6
+2026-02-13 20:52:46,340 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:52:46,340 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:52:46,341 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:52:46,343 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 20:52:46,344 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 20:52:46,356 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 20:52:46,368 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 20:52:46,369 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 20:52:46,387 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:52:54,253 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:52:54,253 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:52:54,254 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:52:54,256 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 20:52:54,256 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 20:52:54,268 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 20:52:54,280 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 20:52:54,280 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 20:52:54,295 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:52:54,530 - modules.note_generator - INFO - export_docx:269 - DOCX file saved: ./output\3db2941e-c8b5-4df0-a92e-3ce1647e9ec6_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.docx
+2026-02-13 20:55:30,647 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 20:55:30,647 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 20:55:30,648 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 20:55:30,651 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 20:55:30,651 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 20:55:30,663 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 20:55:30,674 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 20:55:30,675 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 20:55:30,691 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 20:55:57,255 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:56:00,811 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:56:00,812 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:56:00,812 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:56:00,812 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:56:00,813 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:56:00,813 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:56:00,814 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:56:08,048 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:56:11,190 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:56:11,191 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:56:11,192 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:56:11,192 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:56:11,192 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:56:11,193 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:56:11,194 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:56:57,954 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:57:00,796 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:57:00,797 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:57:00,797 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:57:00,797 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:57:00,798 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:57:00,798 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:57:00,800 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:57:29,800 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 20:57:32,397 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:57:32,397 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:57:32,398 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:57:32,398 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:57:32,399 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:57:32,399 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:57:32,400 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 20:59:55,323 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 20:59:55,324 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 20:59:55,324 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 20:59:55,325 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 20:59:55,325 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 20:59:55,325 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 20:59:55,326 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 21:01:47,795 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 779c485c-e193-4173-bd2d-9b67f4c90821, Size: 340.44 KB
+2026-02-13 21:01:47,796 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, File exists: True
+2026-02-13 21:01:47,827 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 779c485c-e193-4173-bd2d-9b67f4c90821, Path: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 21:01:47,833 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 779c485c-e193-4173-bd2d-9b67f4c90821, Path: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 21:01:47,854 - routes.process - INFO - process_file:63 - Processing started - Job: 779c485c-e193-4173-bd2d-9b67f4c90821
+2026-02-13 21:01:47,855 - routes.process - INFO - process_file:64 - File path received: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:01:47,855 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:01:47,857 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 21:01:47,858 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 21:01:47,859 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 21:01:47,860 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:01:47,861 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 21:01:47,862 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 21:01:51,612 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 21:01:51,612 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 21:01:51,622 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 21:01:51,684 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 21:02:00,269 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 21:02:00,270 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 21:02:00,272 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 21:02:00,273 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 21:02:00,273 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 21:02:00,275 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 21:02:00,293 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 21:02:00,294 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 21:02:00,294 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 21:02:00,295 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 21:02:00,310 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 21:02:00,321 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 21:02:00,322 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 21:02:00,322 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 21:02:00,323 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 21:02:00,511 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 21:02:00,514 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 779c485c-e193-4173-bd2d-9b67f4c90821
+2026-02-13 21:02:00,519 - routes.process - INFO - process_file:63 - Processing started - Job: 779c485c-e193-4173-bd2d-9b67f4c90821
+2026-02-13 21:02:00,519 - routes.process - INFO - process_file:64 - File path received: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:02:00,520 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:02:00,521 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 21:02:00,522 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 21:02:00,523 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 21:02:00,523 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:02:00,524 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\779c485c-e193-4173-bd2d-9b67f4c90821_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 21:02:00,524 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 21:02:00,777 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 21:02:00,777 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 21:02:00,782 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 21:02:00,843 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 21:02:17,065 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 21:02:17,066 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 21:02:17,068 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 21:02:17,069 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 21:02:17,069 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 21:02:17,070 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 21:02:17,072 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 21:02:17,072 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 21:02:17,073 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 21:02:17,073 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 21:02:17,085 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 21:02:17,097 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 21:02:17,098 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 21:02:17,098 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 21:02:17,098 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 21:02:17,110 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 21:02:17,112 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 779c485c-e193-4173-bd2d-9b67f4c90821
+2026-02-13 21:04:55,292 - routes.upload - ERROR - upload_file:90 - Upload validation error: Unsupported file format: .mpeg. Supported: .wav, .avi, .mov, .mp4, .mp3, .flac, .ogg, .m4a, .mkv
+2026-02-13 21:47:18,935 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 21:47:18,937 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 21:47:18,937 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 21:47:18,938 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 21:47:18,938 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 21:47:18,938 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 21:47:18,940 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 21:47:18,942 - __main__ - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 21:48:22,276 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 21:48:22,277 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 21:48:22,277 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 21:48:22,278 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 21:48:22,278 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 21:48:22,278 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 21:48:22,280 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 21:48:22,282 - __main__ - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 21:51:23,957 - main - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 21:51:23,957 - main - INFO - startup_event:117 - Debug mode: True
+2026-02-13 21:51:23,957 - main - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 21:51:23,958 - main - INFO - startup_event:119 - Device: cpu
+2026-02-13 21:51:23,958 - main - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 21:51:23,958 - main - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 21:51:23,960 - main - INFO - startup_event:127 - Directories created/verified
+2026-02-13 21:52:15,611 - main - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 21:52:41,363 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 21:52:41,363 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 21:52:41,364 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 21:52:41,364 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 21:52:41,365 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 21:52:41,365 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 21:52:41,366 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 21:52:41,369 - __main__ - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 21:53:22,943 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 110fdaaf-1a6f-4acb-a28f-854ad92b8254, Size: 340.44 KB
+2026-02-13 21:53:22,945 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, File exists: True
+2026-02-13 21:53:22,980 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 110fdaaf-1a6f-4acb-a28f-854ad92b8254, Path: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 21:53:22,986 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 110fdaaf-1a6f-4acb-a28f-854ad92b8254, Path: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 21:53:23,018 - routes.process - INFO - process_file:63 - Processing started - Job: 110fdaaf-1a6f-4acb-a28f-854ad92b8254
+2026-02-13 21:53:23,019 - routes.process - INFO - process_file:64 - File path received: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:53:23,019 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:53:23,023 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 21:53:23,025 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 21:53:23,026 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 21:53:23,027 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:53:23,029 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 21:53:23,035 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 21:53:26,414 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 21:53:26,415 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 21:53:26,424 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 21:53:26,481 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 21:53:43,796 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 21:53:43,797 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 21:53:43,800 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 21:53:43,800 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 21:53:43,801 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 21:53:43,802 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 21:53:43,808 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 21:53:43,808 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 21:53:43,808 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 21:53:43,809 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 21:53:43,823 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 21:53:43,835 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 21:53:43,835 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 21:53:43,836 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 21:53:43,836 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 21:53:43,871 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 21:53:43,874 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 110fdaaf-1a6f-4acb-a28f-854ad92b8254
+2026-02-13 21:53:43,882 - routes.process - INFO - process_file:63 - Processing started - Job: 110fdaaf-1a6f-4acb-a28f-854ad92b8254
+2026-02-13 21:53:43,882 - routes.process - INFO - process_file:64 - File path received: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:53:43,883 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:53:43,883 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 21:53:43,884 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 21:53:43,885 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 21:53:43,885 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:53:43,886 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 21:53:43,887 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 21:53:44,157 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 21:53:44,157 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 21:53:44,164 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 21:53:44,229 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 21:54:15,729 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 21:54:15,730 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 21:54:15,733 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 21:54:15,734 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 21:54:15,734 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 21:54:15,735 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 21:54:15,738 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 21:54:15,740 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 21:54:15,741 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 21:54:15,742 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 21:54:15,762 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 21:54:15,777 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 21:54:15,778 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 21:54:15,779 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 21:54:15,780 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 21:54:15,799 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 21:54:15,802 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 110fdaaf-1a6f-4acb-a28f-854ad92b8254
+2026-02-13 21:54:15,830 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 21:54:15,831 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 21:54:15,832 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 21:54:15,834 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 21:54:15,835 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 21:54:15,854 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 21:54:15,874 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 21:54:15,874 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 21:54:15,895 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 21:54:16,141 - modules.note_generator - INFO - export_pdf:307 - PDF file saved: ./output\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.pdf
+2026-02-13 21:54:51,621 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 21:54:51,622 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 21:54:51,622 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 21:54:51,624 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 21:54:51,625 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 21:54:51,641 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 21:54:51,652 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 21:54:51,652 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 21:54:51,671 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 21:54:51,933 - modules.note_generator - INFO - export_docx:401 - DOCX file saved: ./output\110fdaaf-1a6f-4acb-a28f-854ad92b8254_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.docx
+2026-02-13 21:57:22,041 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 21:57:22,042 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 21:57:22,042 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 21:57:22,043 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 21:57:22,043 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 21:57:22,043 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 21:57:22,045 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 21:57:22,048 - __main__ - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 21:57:46,015 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 21:57:46,016 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 21:57:46,017 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 21:57:46,017 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 21:57:46,018 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 21:57:46,018 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 21:57:46,020 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 21:58:10,388 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 1a3a3387-9b33-4a94-a396-5a1293693a26, Size: 340.44 KB
+2026-02-13 21:58:10,389 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, File exists: True
+2026-02-13 21:58:10,409 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 1a3a3387-9b33-4a94-a396-5a1293693a26, Path: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 21:58:10,416 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 1a3a3387-9b33-4a94-a396-5a1293693a26, Path: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 21:58:10,426 - routes.process - INFO - process_file:63 - Processing started - Job: 1a3a3387-9b33-4a94-a396-5a1293693a26
+2026-02-13 21:58:10,427 - routes.process - INFO - process_file:64 - File path received: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:58:10,428 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:58:10,429 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 21:58:10,429 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 21:58:10,430 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 21:58:10,431 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:58:10,431 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 21:58:10,432 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 21:58:13,155 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 21:58:13,156 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 21:58:13,164 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 21:58:13,215 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 21:58:20,221 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 21:58:20,222 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 21:58:20,224 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 21:58:20,225 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 21:58:20,225 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 21:58:20,226 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 21:58:20,260 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 21:58:20,264 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 21:58:20,271 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 21:58:20,276 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 21:58:20,375 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 21:58:20,406 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 21:58:20,406 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 21:58:20,407 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 21:58:20,407 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 21:58:20,487 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 21:58:20,491 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 1a3a3387-9b33-4a94-a396-5a1293693a26
+2026-02-13 21:58:20,496 - routes.process - INFO - process_file:63 - Processing started - Job: 1a3a3387-9b33-4a94-a396-5a1293693a26
+2026-02-13 21:58:20,496 - routes.process - INFO - process_file:64 - File path received: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:58:20,497 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:58:20,497 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 21:58:20,498 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 21:58:20,499 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 21:58:20,499 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 21:58:20,500 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\1a3a3387-9b33-4a94-a396-5a1293693a26_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 21:58:20,500 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 21:58:20,744 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 21:58:20,745 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 21:58:20,750 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 21:58:20,805 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 21:58:35,741 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 21:58:35,742 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 21:58:35,744 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 21:58:35,744 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 21:58:35,745 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 21:58:35,745 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 21:58:35,748 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 21:58:35,748 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 21:58:35,749 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 21:58:35,749 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 21:58:35,761 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 21:58:35,772 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 21:58:35,772 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 21:58:35,773 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 21:58:35,773 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 21:58:35,784 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 21:58:35,786 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 1a3a3387-9b33-4a94-a396-5a1293693a26
+2026-02-13 21:58:43,254 - __main__ - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 22:00:27,535 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 22:00:27,536 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 22:00:27,536 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 22:00:27,537 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 22:00:27,537 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 22:00:27,538 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 22:00:27,539 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 22:00:42,946 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: b217509b-b7a1-4a11-a11f-5206492b75ed, Size: 340.44 KB
+2026-02-13 22:00:42,947 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, File exists: True
+2026-02-13 22:00:42,970 - routes.upload - INFO - check_upload_status:108 - Status check - Job: b217509b-b7a1-4a11-a11f-5206492b75ed, Path: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 22:00:42,975 - routes.upload - INFO - check_upload_status:108 - Status check - Job: b217509b-b7a1-4a11-a11f-5206492b75ed, Path: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 22:00:43,005 - routes.process - INFO - process_file:63 - Processing started - Job: b217509b-b7a1-4a11-a11f-5206492b75ed
+2026-02-13 22:00:43,005 - routes.process - INFO - process_file:64 - File path received: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:00:43,006 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:00:43,006 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 22:00:43,007 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:00:43,008 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 22:00:43,008 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:00:43,009 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 22:00:43,009 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 22:00:43,396 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 22:00:43,396 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 22:00:43,403 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 22:00:43,468 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 22:00:53,536 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 22:00:53,537 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 22:00:53,539 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 22:00:53,540 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 22:00:53,543 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:00:53,547 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:00:53,558 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:00:53,560 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 22:00:53,560 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 22:00:53,560 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:00:53,578 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:00:53,590 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:00:53,590 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 22:00:53,590 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 22:00:53,591 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:00:53,670 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:00:53,672 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: b217509b-b7a1-4a11-a11f-5206492b75ed
+2026-02-13 22:00:53,677 - routes.process - INFO - process_file:63 - Processing started - Job: b217509b-b7a1-4a11-a11f-5206492b75ed
+2026-02-13 22:00:53,677 - routes.process - INFO - process_file:64 - File path received: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:00:53,678 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:00:53,678 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 22:00:53,679 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:00:53,680 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 22:00:53,680 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:00:53,681 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\b217509b-b7a1-4a11-a11f-5206492b75ed_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 22:00:53,681 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 22:00:53,913 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 22:00:53,914 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 22:00:53,920 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 22:00:53,989 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 22:05:15,178 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 22:05:15,179 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 22:05:15,180 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 22:05:15,180 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 22:05:15,181 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 22:05:15,181 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 22:05:15,183 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 22:05:27,391 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: 387a67e9-cefc-431d-91e2-ef63103767d8, Size: 340.44 KB
+2026-02-13 22:05:27,392 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, File exists: True
+2026-02-13 22:05:27,413 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 387a67e9-cefc-431d-91e2-ef63103767d8, Path: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 22:05:27,418 - routes.upload - INFO - check_upload_status:108 - Status check - Job: 387a67e9-cefc-431d-91e2-ef63103767d8, Path: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 22:05:27,449 - routes.process - INFO - process_file:63 - Processing started - Job: 387a67e9-cefc-431d-91e2-ef63103767d8
+2026-02-13 22:05:27,450 - routes.process - INFO - process_file:64 - File path received: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:05:27,450 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:05:27,451 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 22:05:27,452 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:05:27,453 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 22:05:27,454 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:05:27,454 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 22:05:27,455 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 22:05:27,864 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 22:05:27,865 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 22:05:27,873 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 22:05:27,949 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 22:05:37,176 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 22:05:37,177 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 22:05:37,178 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 22:05:37,179 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 22:05:37,179 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:05:37,181 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:05:37,190 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:05:37,190 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 22:05:37,190 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 22:05:37,191 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:05:37,208 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:05:37,220 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:05:37,221 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 22:05:37,222 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 22:05:37,223 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:05:37,305 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:05:37,308 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 387a67e9-cefc-431d-91e2-ef63103767d8
+2026-02-13 22:05:37,312 - routes.process - INFO - process_file:63 - Processing started - Job: 387a67e9-cefc-431d-91e2-ef63103767d8
+2026-02-13 22:05:37,313 - routes.process - INFO - process_file:64 - File path received: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:05:37,313 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:05:37,314 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 22:05:37,314 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:05:37,315 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 22:05:37,316 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:05:37,316 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\387a67e9-cefc-431d-91e2-ef63103767d8_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 22:05:37,317 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 22:05:37,670 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 22:05:37,671 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 22:05:37,677 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 22:05:37,750 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 22:05:47,848 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 22:05:47,849 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 22:05:47,851 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 22:05:47,851 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 22:05:47,852 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:05:47,853 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:05:47,855 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:05:47,855 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 22:05:47,856 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 22:05:47,856 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:05:47,872 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:05:47,886 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:05:47,886 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 22:05:47,887 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 22:05:47,887 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:05:47,901 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:05:47,904 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: 387a67e9-cefc-431d-91e2-ef63103767d8
+2026-02-13 22:05:47,929 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:05:47,929 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:05:47,930 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:05:47,931 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:05:47,932 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:05:47,945 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:05:47,959 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:05:47,959 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:05:47,973 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:05:48,049 - modules.note_generator - INFO - export_pdf:307 - PDF file saved: ./output\387a67e9-cefc-431d-91e2-ef63103767d8_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.pdf
+2026-02-13 22:05:50,725 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:05:50,725 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:05:50,726 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:05:50,729 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:05:50,730 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:05:50,752 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:05:50,764 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:05:50,764 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:05:50,778 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:05:51,015 - modules.note_generator - INFO - export_docx:401 - DOCX file saved: ./output\387a67e9-cefc-431d-91e2-ef63103767d8_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.docx
+2026-02-13 22:08:59,641 - __main__ - INFO - shutdown_event:134 - Shutting down Autonotes Generation API
+2026-02-13 22:10:51,381 - __main__ - INFO - startup_event:116 - Starting Autonotes Generation API
+2026-02-13 22:10:51,382 - __main__ - INFO - startup_event:117 - Debug mode: True
+2026-02-13 22:10:51,382 - __main__ - INFO - startup_event:118 - Whisper Model: base
+2026-02-13 22:10:51,383 - __main__ - INFO - startup_event:119 - Device: cpu
+2026-02-13 22:10:51,383 - __main__ - INFO - startup_event:120 - Upload Directory: ./uploads
+2026-02-13 22:10:51,383 - __main__ - INFO - startup_event:121 - Output Directory: ./output
+2026-02-13 22:10:51,385 - __main__ - INFO - startup_event:127 - Directories created/verified
+2026-02-13 22:11:02,529 - routes.upload - INFO - upload_file:77 - File uploaded successfully - Job: a5c9aa2e-bf45-4eeb-b556-bcaf7976a109, Size: 340.44 KB
+2026-02-13 22:11:02,530 - routes.upload - INFO - upload_file:78 - Uploaded file_path: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, File exists: True
+2026-02-13 22:11:02,584 - routes.upload - INFO - check_upload_status:108 - Status check - Job: a5c9aa2e-bf45-4eeb-b556-bcaf7976a109, Path: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 22:11:02,589 - routes.upload - INFO - check_upload_status:108 - Status check - Job: a5c9aa2e-bf45-4eeb-b556-bcaf7976a109, Path: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, Exists: True
+2026-02-13 22:11:02,599 - routes.process - INFO - process_file:63 - Processing started - Job: a5c9aa2e-bf45-4eeb-b556-bcaf7976a109
+2026-02-13 22:11:02,600 - routes.process - INFO - process_file:64 - File path received: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:11:02,600 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:11:02,601 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 22:11:02,601 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:11:02,602 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 22:11:02,603 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:11:02,603 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 22:11:02,604 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 22:11:03,069 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 22:11:03,070 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 22:11:03,078 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 22:11:03,164 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 22:11:09,953 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 22:11:09,955 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 22:11:09,962 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 22:11:09,963 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 22:11:09,964 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:11:09,965 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:11:09,977 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:11:09,978 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 22:11:09,978 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 22:11:09,979 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:11:09,993 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:11:10,013 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:11:10,013 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 22:11:10,014 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 22:11:10,014 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:11:10,100 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:11:10,104 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: a5c9aa2e-bf45-4eeb-b556-bcaf7976a109
+2026-02-13 22:11:10,111 - routes.process - INFO - process_file:63 - Processing started - Job: a5c9aa2e-bf45-4eeb-b556-bcaf7976a109
+2026-02-13 22:11:10,112 - routes.process - INFO - process_file:64 - File path received: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:11:10,113 - routes.process - INFO - process_file:65 - Checking if file exists at: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:11:10,115 - modules.transcriber - INFO - __init__:32 - Transcriber initialized with SpeechRecognition
+2026-02-13 22:11:10,115 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:11:10,117 - routes.process - INFO - process_file:87 - Step 1: Transcribing audio...
+2026-02-13 22:11:10,117 - modules.transcriber - INFO - transcribe:77 - Starting real transcription: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3
+2026-02-13 22:11:10,118 - modules.transcriber - INFO - transcribe:85 - File exists: ./uploads\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What is Marker Interface in Java corejava marker interfaces coding java4quicklearning.mp3, size: 348607 bytes
+2026-02-13 22:11:10,118 - modules.transcriber - INFO - transcribe:89 - Loading audio from .mp3 file
+2026-02-13 22:11:10,367 - modules.transcriber - INFO - transcribe:94 - Audio loaded successfully. Duration: 29.118s
+2026-02-13 22:11:10,368 - modules.transcriber - INFO - transcribe:102 - Attempting direct audio transcription...
+2026-02-13 22:11:10,373 - modules.transcriber - INFO - transcribe:110 - Exported to temp: C:\Users\gaura\AppData\Local\Temp\audio_temp.wav
+2026-02-13 22:11:10,431 - modules.transcriber - INFO - transcribe:115 - Audio data recorded, sending to Google Speech API...
+2026-02-13 22:11:16,689 - modules.transcriber - INFO - transcribe:120 - First 100 chars: what is marker interface in Java and interface that does not have any method feels or constance that
+2026-02-13 22:11:16,690 - modules.transcriber - INFO - transcribe:140 - Transcription complete: 67 words
+2026-02-13 22:11:16,692 - routes.process - INFO - process_file:89 - Transcription complete: 29.118s, 67 words
+2026-02-13 22:11:16,693 - routes.process - INFO - process_file:92 - Step 2: Processing text...
+2026-02-13 22:11:16,694 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:11:16,694 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:11:16,696 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:11:16,696 - routes.process - INFO - process_file:95 - Processing complete: 2 sections
+2026-02-13 22:11:16,697 - routes.process - INFO - process_file:98 - Step 3: Generating summary...
+2026-02-13 22:11:16,697 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:11:16,715 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:11:16,730 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:11:16,731 - routes.process - INFO - process_file:123 - Summarization complete: 4 bullet points
+2026-02-13 22:11:16,731 - routes.process - INFO - process_file:126 - Step 4: Generating formatted notes...
+2026-02-13 22:11:16,731 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:11:16,743 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:11:16,745 - routes.process - INFO - process_file:143 - Processing completed successfully - Job: a5c9aa2e-bf45-4eeb-b556-bcaf7976a109
+2026-02-13 22:11:26,525 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:11:26,525 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:11:26,526 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:11:26,528 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:11:26,528 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:11:26,545 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:11:26,559 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:11:26,559 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:11:26,577 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:11:26,773 - modules.note_generator - INFO - export_docx:401 - DOCX file saved: ./output\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.docx
+2026-02-13 22:16:35,523 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:16:35,527 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:16:35,529 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:16:35,539 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:16:35,540 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:16:35,576 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:16:35,592 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:16:35,593 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:16:35,703 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:16:35,916 - modules.note_generator - INFO - export_docx:401 - DOCX file saved: ./output\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.docx
+2026-02-13 22:16:55,539 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:16:55,540 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:16:55,540 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:16:55,543 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:16:55,544 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:16:55,556 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:16:55,569 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:16:55,569 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:16:55,597 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:16:55,598 - modules.note_generator - INFO - export_all_formats:428 - Exporting all formats for: a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning
+2026-02-13 22:16:55,602 - modules.note_generator - INFO - export_markdown:210 - Markdown file saved: ./output\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.md
+2026-02-13 22:16:55,814 - modules.note_generator - INFO - export_pdf:307 - PDF file saved: ./output\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.pdf
+2026-02-13 22:16:55,969 - modules.note_generator - INFO - export_docx:401 - DOCX file saved: ./output\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.docx
+2026-02-13 22:16:55,970 - modules.note_generator - INFO - export_all_formats:440 - All formats exported successfully
+2026-02-13 22:16:58,226 - modules.summarizer - INFO - __init__:31 - Summarizer initialized (extractive mode)
+2026-02-13 22:16:58,226 - modules.processor - INFO - process_transcript:524 - Starting text processing
+2026-02-13 22:16:58,227 - modules.processor - INFO - _add_sentence_boundaries:87 - Transcript lacks punctuation – adding sentence boundaries
+2026-02-13 22:16:58,229 - modules.processor - INFO - process_transcript:544 - Processing complete. Topics: 2, Words: 67
+2026-02-13 22:16:58,229 - modules.summarizer - INFO - summarize:133 - Summarizing text (67 words, 4 sentences)
+2026-02-13 22:16:58,242 - modules.summarizer - INFO - summarize:133 - Summarizing text (38 words, 2 sentences)
+2026-02-13 22:16:58,255 - modules.summarizer - INFO - extract_bullet_points:233 - Extracted 4 bullet points
+2026-02-13 22:16:58,256 - modules.note_generator - INFO - generate_note_content:40 - Generating note content for: What is Marker Interface in Java corejava marker interfaces coding java4quicklearning
+2026-02-13 22:16:58,268 - modules.note_generator - INFO - generate_note_content:54 - Note content generated successfully
+2026-02-13 22:16:58,270 - modules.note_generator - INFO - export_markdown:210 - Markdown file saved: ./output\a5c9aa2e-bf45-4eeb-b556-bcaf7976a109_What_is_Marker_Interface_in_Java_corejava_marker_interfaces_coding_java4quicklearning.md
