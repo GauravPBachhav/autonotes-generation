@@ -142,12 +142,15 @@ async def process_file(request: ProcessRequest):
 
         logger.info(f"Processing completed successfully - Job: {request.job_id}")
 
+        # Build structured notes data for frontend
+        structured_notes = processed_data.get("structured_notes", {})
+
         return JSONResponse({
             "success": True,
             "job_id": request.job_id,
             "status": "completed",
             "transcript": {
-                "text": transcript["text"][:1000] + "..." if len(transcript["text"]) > 1000 else transcript["text"],
+                "text": transcript["text"],
                 "duration": transcript["duration"],
                 "language": transcript["language"],
                 "segment_count": len(transcript["segments"]),
@@ -157,9 +160,25 @@ async def process_file(request: ProcessRequest):
                 "word_count": processed_data["word_count"],
                 "sentence_count": processed_data["sentence_count"],
                 "keywords": processed_data["keywords"],
+                "key_phrases": processed_data.get("key_phrases", []),
+                "sections": [
+                    {
+                        "title": s.get("title", f"Topic {i+1}"),
+                        "text": s.get("text", ""),
+                        "keywords": s.get("keywords", []),
+                        "summary": s.get("summary", ""),
+                    }
+                    for i, s in enumerate(processed_data.get("sections", []))
+                ],
+            },
+            "structured_notes": {
+                "topics": structured_notes.get("topics", []),
+                "definitions": structured_notes.get("definitions", []),
+                "key_takeaways": structured_notes.get("key_takeaways", []),
+                "quick_revision": structured_notes.get("quick_revision", []),
             },
             "summaries": {
-                "overall_summary": summaries["overall_summary"][:500] + "...",
+                "overall_summary": summaries["overall_summary"],
                 "bullet_point_count": len(summaries["bullet_points"]),
                 "bullet_points": summaries["bullet_points"],
             },

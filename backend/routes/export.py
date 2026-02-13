@@ -60,15 +60,36 @@ async def export_notes(request: ExportRequest):
         with open(transcript_path, "r", encoding="utf-8") as f:
             transcript = json.load(f)
 
-        # Initialize note generator
+        # Initialize modules to regenerate full notes
         note_generator = NoteGenerator(output_dir=settings.OUTPUT_DIR)
 
-        # Prepare note content (simplified for export)
-        note_content = {
-            "markdown": f"# {request.title}\n\n{transcript.get('text', '')}",
-            "html": f"<h1>{request.title}</h1><p>{transcript.get('text', '')}</p>",
-            "text": transcript.get("text", ""),
+        from modules.processor import TextProcessor
+        from modules.summarizer import Summarizer
+
+        processor = TextProcessor()
+        summarizer = Summarizer()
+
+        # Re-process transcript for full structured output
+        raw_text = transcript.get("text", "")
+        processed_data = processor.process_transcript(raw_text)
+
+        overall_summary = summarizer.summarize(processed_data["cleaned_text"])
+        section_summaries = summarizer.summarize_sections(processed_data["sections"])
+        bullet_points = summarizer.extract_bullet_points(processed_data["cleaned_text"], num_points=10)
+        processed_data["sections"] = section_summaries
+
+        summaries = {
+            "overall_summary": overall_summary,
+            "bullet_points": bullet_points,
         }
+
+        # Generate full note content (transcription + structured notes)
+        note_content = note_generator.generate_note_content(
+            title=request.title,
+            transcript_data=transcript,
+            processed_data=processed_data,
+            summaries=summaries,
+        )
 
         # Export based on format
         if request.format == "all":
